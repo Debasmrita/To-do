@@ -30,20 +30,12 @@ html, body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-h1 { /* Changed from h2 in HTML to h1, ensure your h2 in HTML is handled properly or change this to h2 if you intend it to be a h2 */
+h1 {
   font-size: clamp(1.8rem, 5vw, 3rem);
   color: #ff1493;
   margin-bottom: 20px;
   text-align: center;
 }
-/* If your H2 in HTML is .barbie-title, then you should also target that: */
-.barbie-title {
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  color: #ff1493;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 
 .row {
   display: flex;
@@ -87,18 +79,18 @@ button:hover {
 }
 
 ul li {
-  display: flex; /* Use flexbox for better alignment of text and icon */
-  align-items: center; /* Vertically center content */
+  display: flex;
+  align-items: center;
   position: relative;
   font-size: 1rem;
-  /* Adjust padding to provide enough space for the delete 'x' icon */
-  padding: 12px 55px 12px 45px; /* Increased right padding to 55px from 40px */
+  padding: 12px 40px 12px 70px;
   background: #fff;
   border-radius: 12px;
   margin-bottom: 10px;
   transition: all 0.2s ease;
-  word-break: break-word; /* Ensures long words break and wrap */
-  white-space: normal; /* Ensures text wraps */
+  word-break: break-word;
+
+  white-space: normal;
   line-height: 1.4;
 }
 
@@ -116,6 +108,7 @@ ul li::before {
   transform: translateY(-50%);
 }
 
+
 ul li:hover {
   background-color: #fce6f2;
 }
@@ -131,18 +124,16 @@ ul li.checked::before {
 
 ul li span {
   position: absolute;
-  right: 10px; /* Positions the 'x' 10px from the right edge of the li */
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust for vertical centering */
+  right: 10px;
+  top: 8px;
   width: 30px;
   height: 30px;
   font-size: 1.4rem;
   color: #555;
-  line-height: 30px; /* For vertical alignment of 'x' character */
+  line-height: 30px;
   text-align: center;
   border-radius: 50%;
   transition: 0.3s;
-  cursor: pointer; /* Indicate it's clickable */
 }
 
 ul li span:hover {
@@ -150,7 +141,7 @@ ul li span:hover {
   color: #e60073;
 }
 
-/* Responsive Styles */
+/* ✅ Responsive Styles */
 @media (max-width: 600px) {
   .container {
     padding: 10px;
@@ -161,7 +152,7 @@ ul li span:hover {
     padding: 30px 20px 50px;
   }
 
-  h1, .barbie-title { /* Added .barbie-title here too */
+  h1 {
     font-size: 1.7rem;
   }
 
@@ -183,15 +174,12 @@ ul li span:hover {
 
   ul li {
     font-size: 1rem;
-    /* CRITICAL FIX: Increased right padding for small screens */
-    padding: 10px 45px 10px 50px; /* Increased right padding significantly (e.g., from 8px to 45px) */
+    padding: 10px 45px 10px 50px;
   }
 
   ul li span {
     font-size: 1.2rem;
-    /* Adjusting top/right for consistency and appearance on small screens */
-    top: 50%;
-    transform: translateY(-50%);
+    top: 6px;
     right: 6px;
   }
 }
