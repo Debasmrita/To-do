@@ -135,3 +135,41 @@ ul li span:hover {
   background: #ffe6f1;
   color: #e60073;
 }
+
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  ul li {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  ul li span {
+    font-size: 1.2rem;
+    right: 10px;
+  }
+}
